@@ -42,7 +42,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "PUBG UC Prices\n\n8100 UC - Rs 3500 ($ 50)\n16000uc - Rs 6000 ($ 80)\n24000 - Rs 9000 ($ 120)"
+    mentions = "PUBG UC Prices \n \n8100 UC - Rs 3500 ($ 50) \n16000uc - Rs 6000 ($ 80) \n24000 - Rs 9000 ($ 120)"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -58,7 +58,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "the following Payment methods are accepted:\n\nPhone Pe\nGoogle Pay\nPaytm(KYC completed)\nBitcoins\nPayPal\nSkrill"
+    mentions = "The following Payment methods are accepted: \n\nPhone Pe \nGoogle Pay \nPaytm(KYC completed) \nBitcoins \nPayPal \nSkrill"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
