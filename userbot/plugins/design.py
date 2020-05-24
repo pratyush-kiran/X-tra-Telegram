@@ -25,7 +25,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "`8455015107indus@indus` \n 👆Click on this to Copy👆 \n Pay on this UPI ID using Phone pe/Google Pay or any UPI Payment App"
+    mentions = "`8455015107indus@indus` \n 👆Click on this to Copy👆 \nPay on this UPI ID using Phone pe/Google Pay"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
