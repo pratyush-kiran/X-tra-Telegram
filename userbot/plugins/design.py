@@ -21,9 +21,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-# added  
-
-    @borg.on(admin_cmd("pay"))
+@borg.on(admin_cmd("pay"))
 async def _(event):
     if event.fwd_from:
         return
@@ -37,4 +35,4 @@ async def _(event):
         await reply_message.reply(mentions)
     else:
         await event.reply(mentions)
-    await event.delete()
+    await event.delete()    
