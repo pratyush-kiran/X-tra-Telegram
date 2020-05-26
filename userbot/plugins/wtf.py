@@ -24,15 +24,15 @@ async def _(event):
             "What The",
             "What The F",
             "What The Fuck",
-            "What The Fuck Bruh"
-            "**What The Fuck Bruh**"
-            "What The Fuck Bruh"
-            "**What The Fuck Bruh**"
-            "What The Fuck Bruh"
-            "**What The Fuck Bruh**"
-            "What The Fuck Bruh"
-            "**What The Fuck Bruh**"
-            "What The Fuck Bruh"
+            "What The Fuck Bruh",
+            "**What The Fuck Bruh**",
+            "What The Fuck Bruh",
+            "**What The Fuck Bruh**",
+            "What The Fuck Bruh",
+            "**What The Fuck Bruh**",
+            "What The Fuck Bruh",
+            "**What The Fuck Bruh**",
+            "What The Fuck Bruh",
             "**What The Fuck Bruh**"
         ]
 
