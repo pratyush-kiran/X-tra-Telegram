@@ -145,7 +145,7 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"__My Master Has Been Gone For__ `{total_afk_time}`\nWhere He Is: ~~ONLY GOD KNOWS~~ " + \
+        message_to_reply = f"__My Master Has Been Gone For__ `{total_afk_time}` \n__This is an auto reply__\n\nWhere He Is: **ONLY GOD KNOWS** " + \
             f"\n__Hey, I'll be back in few moments__\n**REASON**: {reason}" \
             if reason \
             else f"**Heya!**\n__I am currently unavailable. Since when, you ask? For {total_afk_time} I guess.__\n\nWhen will I be back? Soon !! 😃  "
