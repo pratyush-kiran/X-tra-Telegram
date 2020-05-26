@@ -40,3 +40,34 @@ async def _(event):
         	
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i %5 ])
+
+@borg.on(admin_cmd("(.*)"))
+async def _(event):
+    if event.fwd_from:
+        return
+    animation_interval = 0.3
+    animation_ttl = range(0, 20)
+    input_str = event.pattern_match.group(1)
+    if input_str == "pay2":
+        await event.edit(input_str)
+        animation_chars = [
+            "`8455015107indus@indus`👈 \n👆 Click here to Copy👆 \n\nPay on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus` 👈\n 👆**Click here to Copy** 👆\n\n**Pay** on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus`👈 \n👆 Click here to Copy👆 \n\nPay on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus` 👈\n 👆**Click here to Copy** 👆\n\n**Pay** on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus`👈 \n👆 Click here to Copy👆 \n\nPay on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus` 👈\n 👆**Click here to Copy** 👆\n\n**Pay** on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus`👈 \n👆 Click here to Copy👆 \n\nPay on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus` 👈\n 👆**Click here to Copy** 👆\n\n**Pay** on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus`👈 \n👆 Click here to Copy👆 \n\nPay on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus` 👈\n 👆**Click here to Copy** 👆\n\n**Pay** on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus`👈 \n👆 Click here to Copy👆 \n\nPay on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus` 👈\n 👆**Click here to Copy** 👆\n\n**Pay** on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus`👈 \n👆 Click here to Copy👆 \n\nPay on this UPI ID through Phone Pe/Google Pay"
+            "`8455015107indus@indus` 👈\n 👆**Click here to Copy** 👆\n\n**Pay** on this UPI ID through Phone Pe/Google Pay"
+]
+
+        for i in animation_ttl:
+        	
+            await asyncio.sleep(animation_interval)
+            await event.edit(animation_chars[i %5 ])
