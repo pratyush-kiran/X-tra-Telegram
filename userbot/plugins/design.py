@@ -60,6 +60,7 @@ async def _(event):
     if event.fwd_from:
         return
     mentions = "**The following Payment methods are accepted:** \n \nPhone Pe \nGoogle Pay \nPaytm(only KYC verified) \nBitcoins \nPayPal \nSkrill \n\nAny other method ?"
+    mentions = "**The following para 2 Payment methods are accepted:** \n \nPhone Pe \nGoogle Pay \nPaytm(only KYC verified) \nBitcoins \nPayPal \nSkrill \n\nAny other method ?"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
