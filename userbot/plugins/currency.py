@@ -23,7 +23,7 @@ async def _(event):
             if currency_to in current_response["rates"]:
                 current_rate = float(current_response["rates"][currency_to])
                 rebmun = round(number * current_rate, 2)
-                await event.edit("**According to current rates,**\n {} **{}** = {} **{}**\n \n●▬▬▬▬▬ஜ۩❀۩ஜ▬▬▬▬▬●\n\n**Current Conversion Rates:**\n 1 **{}** = {} **{}**".format(number, currency_from, rebmun, currency_to, currency_from, current_rate, currency_to))
+                await event.edit("**According to current rates,**\n {} **{}** = {} **{}**\n \n●▬▬▬▬▬▬۩❀۩▬▬▬▬▬▬●\n\n**Current Conversion Rates:**\n 1 **{}** = {} **{}**".format(number, currency_from, rebmun, currency_to, currency_from, current_rate, currency_to))
             else:
                 await event.edit("Welp, Hate to tell yout this but this Currency isn't supported **yet**.\n__Try__ `.currencies` __for a list of supported currencies.__")
         except e:
