@@ -89,7 +89,7 @@ async def _(event):
 
 :white_check_mark:" ESCROW accepted\n"
 :white_check_mark:" 100% Guarantee (For 1 month)\n\n"
-:white_check_mark: "Payment via:\n            PayTM\n            Phone Pe\n            Google Pay\n            BTC"
+:white_check_mark: "Payment via:\n            PayTM\n            Phone Pe\n            Google Pay\n            BTC")
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
