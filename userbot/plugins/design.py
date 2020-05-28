@@ -76,20 +76,9 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = (
-        "RDP For Sale\n\n🟢 WINDOWS\n\n"
-
-:radio_button:" 4 GB - ₹100 / $1.5\n"
-:radio_button:" 8 GB - ₹200 / $3\n"
-:radio_button:" 16 GB - ₹300 / $4.5\n"
-:radio_button:" 32 GB - ₹400 / $6\n"
-:radio_button:" 64 GB - ₹500 / $7.5 (10 Gbit speed)\n"
-:radio_button:" 128 GB - ₹700 / $10 (12 Gbit speed)\n\n"
-:radio_button:" Higher Configuration RDP with GPU\n      also available !!\n\n"
-
-:white_check_mark:" ESCROW accepted\n"
-:white_check_mark:" 100% Guarantee (For 1 month)\n\n"
-:white_check_mark: "Payment via:\n            PayTM\n            Phone Pe\n            Google Pay\n            BTC")
+    mentions = 
+        "🟢 RDP For Sale 🟢\n\n🟢 WINDOWS\n\n🟢 4 GB - ₹100 / $1.5\n🟢 8 GB - ₹200 / $3\n🟢 16 GB - ₹300 / $4.5\n🟢 32 GB - ₹400 / $6\n🟢 64 GB - ₹500 / $7.5 (10 Gbit speed)\n🟢 128 GB - ₹700 / $10 (12 Gbit speed)\n\n🟢 Higher Configuration RDP with GPU\n   also available !!\n\n🟢 ESCROW accepted\n🟢 100% Guarantee (For 1 month)\n\n🟢 Payment via:\n            __PayTM__\n            __Phone Pe__\n            __Google Pay__\n            __Bitcoins__\n            __PayPal__"
+    
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
