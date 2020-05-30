@@ -93,7 +93,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "🟢 RDP For Sale 🟢\n\n🟢 WINDOWS\n\n🟢 4 GB - ₹100 / $1.5\n🟢 8 GB - ₹200 / $3\n🟢 16 GB - ₹300 / $4.5\n🟢 32 GB - ₹400 / $6\n🟢 64 GB - ₹500 / $7.5 (10 Gbit speed)\n🟢 128 GB - ₹700 / $10 (12 Gbit speed)\n\n🟢 Higher Configuration RDP with GPU\n   also available !!\n\n🟢 ESCROW accepted\n🟢 100% Guarantee (For 1 month)\n\n🟢 Payment via:\n            __PayTM__\n            __Phone Pe__\n            __Google Pay__\n            __Bitcoins__\n            __PayPal__"
+    mentions = "💸 RDP For Sale 💸\n\n🔰 WINDOWS 🔰\n\n🔘 4 GB - ₹100 / $1.5\n🔘 8 GB - ₹200 / $3\n🔘 16 GB - ₹300 / $4.5\n🔘 32 GB - ₹400 / $6\n🔘 64 GB - ₹500 / $7.5 (10 Gbit speed)\n🔘 128 GB - ₹700 / $10 (12 Gbit speed)\n\n🔘 Higher Configuration RDP with GPU\n   also available !!\n\n🔘 ESCROW accepted\n🔘 100% Guarantee (For 1 month)\n\n🔘 Payment via:\n            __PayTM__\n            __Phone Pe__\n            __Google Pay__\n            __Bitcoins__\n            __PayPal__"
     
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
@@ -123,3 +123,20 @@ async def _(event):
         await event.reply(mentions)
     await event.delete() 
 
+
+@borg.on(admin_cmd("phonepe"))
+async def _(event):
+    if event.fwd_from:
+        return
+    mentions = "hello" 
+    file=https://telegra.ph/file/a9cbab23bdc068180cd4d.jpg
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+        mentions += f""
+    reply_message = None
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        await reply_message.reply(mentions)
+    else:
+        await event.reply(mentions)
+    await event.delete() 
