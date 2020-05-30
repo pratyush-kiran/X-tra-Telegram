@@ -106,3 +106,36 @@ async def _(event):
         await event.reply(mentions)
     await event.delete() 
    
+
+@borg.on(admin_cmd("added"))
+async def _(event):
+    if event.fwd_from:
+        return
+    mentions = "The following new Commands are added:\n\n.uc For UC Packs\n.pay To show UPI ID info\n.method To show payment method accepted\n.rdp To show available rdp\n.phone pe\n"
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+        mentions += f""
+    reply_message = None
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        await reply_message.reply(mentions)
+    else:
+        await event.reply(mentions)
+    await event.delete() 
+
+@borg.on(admin_cmd("phonepe"))
+async def _(event):
+    if event.fwd_from:
+        return
+    mentions = "Follow the steps boiii"
+               file="https://telegra.ph/file/44f8c8ddd867f7921bc58.jpg"
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+        mentions += f""
+    reply_message = None
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        await reply_message.reply(mentions)
+    else:
+        await event.reply(mentions)
+    await event.delete() 
