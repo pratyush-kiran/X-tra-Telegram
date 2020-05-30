@@ -122,21 +122,3 @@ async def _(event):
     else:
         await event.reply(mentions)
     await event.delete() 
-
-
-@borg.on(admin_cmd("phonepe"))
-async def _(event):
-    if event.fwd_from:
-        return
-    mentions = "hello" 
-    file=https://telegra.ph/file/a9cbab23bdc068180cd4d.jpg
-    chat = await event.get_input_chat()
-    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
-        mentions += f""
-    reply_message = None
-    if event.reply_to_msg_id:
-        reply_message = await event.get_reply_message()
-        await reply_message.reply(mentions)
-    else:
-        await event.reply(mentions)
-    await event.delete() 
