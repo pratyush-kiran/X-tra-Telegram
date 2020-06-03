@@ -59,24 +59,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "**The following para 1 Payment methods are accepted:** \n \nPhone Pe \nGoogle Pay \nPaytm(only KYC verified) \nBitcoins \nPayPal \nSkrill \n\nAny other method ?"
-    chat = await event.get_input_chat()
-    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
-        mentions += f""
-    reply_message = None
-    if event.reply_to_msg_id:
-        reply_message = await event.get_reply_message()
-        await reply_message.reply(mentions)
-    else:
-        await event.reply(mentions)
-    await event.delete() 
-
-
-@borg.on(admin_cmd("method"))
-async def _(event):
-    if event.fwd_from:
-        return
-    mentions = "**The following para 2 Payment methods are accepted:** \n \nPhone Pe \nGoogle Pay \nPaytm(only KYC verified) \nBitcoins \nPayPal \nSkrill \n\nAny other method ?"
+    mentions = "**The following Payment methods are accepted:** \n \nPhone Pe \nGoogle Pay \nPaytm(only KYC verified) \nBitcoins \nPayPal \nSkrill \n\nAny other method ?"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -129,6 +112,57 @@ async def _(event):
     if event.fwd_from:
         return
     mentions = "Hello buddy\n\n This is a automated reply !!"
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+        mentions += f""
+    reply_message = None
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        await reply_message.reply(mentions)
+    else:
+        await event.reply(mentions)
+    await event.delete() 
+
+
+@borg.on(admin_cmd("pp"))
+async def _(event):
+    if event.fwd_from:
+        return
+    mentions = "Follow these steps...."
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+        mentions += f""
+    reply_message = None
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        await reply_message.reply(mentions)
+    else:
+        await event.reply(mentions)
+    await event.delete() 
+
+
+@borg.on(admin_cmd("pp"))
+async def _(event):
+    if event.fwd_from:
+        return
+    mentions = "[Step 1](https://telegra.ph/file/1f317ae7d54318a6d5529.jpg)"
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+        mentions += f""
+    reply_message = None
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        await reply_message.reply(mentions)
+    else:
+        await event.reply(mentions)
+    await event.delete() 
+
+
+@borg.on(admin_cmd("pp"))
+async def _(event):
+    if event.fwd_from:
+        return
+    mentions = "[Step 1](https://telegra.ph/file/1f317ae7d54318a6d5529.jpg)\n\n[Step 2](https://telegra.ph/file/5d0109130bec0786d7648.jpg)"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
