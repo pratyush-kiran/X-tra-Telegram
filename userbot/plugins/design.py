@@ -5,21 +5,6 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("join"))
-async def _(event):
-    if event.fwd_from:
-        return
-    mentions = "`━━━━━┓ \n┓┓┓┓┓┃\n┓┓┓┓┓┃　ヽ○ノ ⇦ Me When You Joined \n┓┓┓┓┓┃.     /　 \n┓┓┓┓┓┃ ノ) \n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃\n┓┓┓┓┓┃`"
-    chat = await event.get_input_chat()
-    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
-        mentions += f""
-    reply_message = None
-    if event.reply_to_msg_id:
-        reply_message = await event.get_reply_message()
-        await reply_message.reply(mentions)
-    else:
-        await event.reply(mentions)
-    await event.delete()
 
 @borg.on(admin_cmd("pay"))
 async def _(event):
@@ -55,11 +40,27 @@ async def _(event):
     await event.delete() 
     
 
-@borg.on(admin_cmd("method"))
+@borg.on(admin_cmd("paymeth"))
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "**The following Payment methods are accepted:** \n \nPhone Pe \nGoogle Pay \nPaytm(only KYC verified) \nBitcoins \nPayPal \nSkrill \n\nAny other method ?"
+    mentions = "**The following Payment methods are accepted:** \n \nPhone Pe \nGoogle Pay \nPaytm(only KYC verified) \nBitcoins \nPayPal \nSkrill "
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+        mentions += f""
+    reply_message = None
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        await reply_message.reply(mentions)
+    else:
+        await event.reply(mentions)
+    await event.delete() 
+
+@borg.on(admin_cmd("paymeth"))
+async def _(event):
+    if event.fwd_from:
+        return
+    mentions = "__Any other Payment method ??🤔__"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -94,7 +95,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "The following new Commands are added:\n\n.uc For UC Packs\n.pay To show UPI ID info\n.method To show payment method accepted\n.rdp To show available rdp\n.phone pe\n"
+    mentions = "The following new Commands are added:\n\n.uc For UC Packs\n.pay To show UPI ID info\n.paymeth To show payment method accepted\n.rdp To show available rdp\n.pp To gib video tut of phone pe\n"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -128,7 +129,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "Follow these steps...."
+    mentions = "[Steps to Pay to a UPI ID using Phone pe](https://telegra.ph/file/f84fc0f2862b86457ed31.mp4)"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -140,36 +141,3 @@ async def _(event):
         await event.reply(mentions)
     await event.delete() 
 
-
-@borg.on(admin_cmd("pp"))
-async def _(event):
-    if event.fwd_from:
-        return
-    mentions = "[Step 1](https://telegra.ph/file/1f317ae7d54318a6d5529.jpg)"
-    chat = await event.get_input_chat()
-    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
-        mentions += f""
-    reply_message = None
-    if event.reply_to_msg_id:
-        reply_message = await event.get_reply_message()
-        await reply_message.reply(mentions)
-    else:
-        await event.reply(mentions)
-    await event.delete() 
-
-
-@borg.on(admin_cmd("pp"))
-async def _(event):
-    if event.fwd_from:
-        return
-    mentions = "[Step 1](https://telegra.ph/file/1f317ae7d54318a6d5529.jpg)\n\n[Step 2](https://telegra.ph/file/5d0109130bec0786d7648.jpg)"
-    chat = await event.get_input_chat()
-    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
-        mentions += f""
-    reply_message = None
-    if event.reply_to_msg_id:
-        reply_message = await event.get_reply_message()
-        await reply_message.reply(mentions)
-    else:
-        await event.reply(mentions)
-    await event.delete() 
