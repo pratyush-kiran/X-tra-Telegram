@@ -40,7 +40,7 @@ async def _(event):
     await event.delete() 
     
 
-@borg.on(admin_cmd("paymeth"))
+@borg.on(admin_cmd("meth"))
 async def _(event):
     if event.fwd_from:
         return
@@ -56,7 +56,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete() 
 
-@borg.on(admin_cmd("paymeth"))
+@borg.on(admin_cmd("meth1"))
 async def _(event):
     if event.fwd_from:
         return
